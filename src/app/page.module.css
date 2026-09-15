@@ -1,6 +1,6 @@
 /* =========================================================
-   SHREYA JYALA — COLLEGE PRESIDENT ELECTION
-   Premium Editorial Election Landing Page
+   SHREEYA JYALA — BCSU PRESIDENTIAL ELECTION
+   Premium Editorial Campaign Website
    ========================================================= */
 
 * {
@@ -14,7 +14,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #0d0b12;
+  background: #071a29;
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -23,7 +23,7 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  background: #0d0b12;
+  background: #071a29;
 }
 
 
@@ -35,7 +35,6 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 82px;
 
@@ -49,15 +48,12 @@ body {
 
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.45),
-    rgba(0, 0, 0, 0)
+    rgba(3, 14, 23, 0.78),
+    rgba(3, 14, 23, 0)
   );
 
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(5px);
 }
-
-
-/* Small logo */
 
 .nav-logo {
   width: 44px;
@@ -67,64 +63,57 @@ body {
   align-items: center;
   justify-content: center;
 
-  border: 1px solid rgba(255, 255, 255, 0.55);
-
+  border: 1px solid rgba(255, 255, 255, 0.65);
   border-radius: 50%;
 
   color: #ffffff;
+  text-decoration: none;
 
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 1px;
 
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .nav-logo:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: #ffffff;
-  transform: rotate(8deg);
+  background: #ffffff;
+  color: #071a29;
+  transform: rotate(6deg);
 }
-
-
-/* Navigation */
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 42px;
+  gap: 38px;
 }
 
 .nav-links a {
   position: relative;
 
   color: rgba(255, 255, 255, 0.9);
-
   text-decoration: none;
 
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
 
-  letter-spacing: 1.5px;
+  letter-spacing: 1.7px;
   text-transform: uppercase;
 
   padding: 8px 0;
 
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .nav-links a::after {
   content: "";
 
   position: absolute;
-
   left: 0;
   bottom: 0;
 
   width: 0;
-  height: 1px;
+  height: 2px;
 
   background: #ffffff;
 
@@ -133,15 +122,11 @@ body {
 
 .nav-links a:hover {
   color: #ffffff;
-  transform: translateY(-2px);
 }
 
 .nav-links a:hover::after {
   width: 100%;
 }
-
-
-/* Mobile menu */
 
 .mobile-menu {
   display: none;
@@ -150,7 +135,6 @@ body {
   height: 42px;
 
   border: 1px solid rgba(255, 255, 255, 0.45);
-
   background: transparent;
 
   cursor: pointer;
@@ -158,6 +142,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
   gap: 5px;
 }
 
@@ -180,18 +165,13 @@ body {
 
   display: flex;
   align-items: center;
-  justify-content: center;
 
   overflow: hidden;
 }
 
-
-/* Image */
-
 .hero-image {
   position: absolute;
   inset: 0;
-
   z-index: 0;
 }
 
@@ -199,9 +179,6 @@ body {
   object-fit: cover;
   object-position: center;
 }
-
-
-/* Dark overlay */
 
 .hero-overlay {
   position: absolute;
@@ -212,68 +189,78 @@ body {
   background:
     linear-gradient(
       90deg,
-      rgba(8, 7, 13, 0.76) 0%,
-      rgba(8, 7, 13, 0.36) 42%,
-      rgba(8, 7, 13, 0.12) 100%
+      rgba(3, 13, 22, 0.9) 0%,
+      rgba(3, 13, 22, 0.65) 38%,
+      rgba(3, 13, 22, 0.18) 78%,
+      rgba(3, 13, 22, 0.08) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(3, 13, 22, 0.15),
+      rgba(3, 13, 22, 0.55)
     );
 
   pointer-events: none;
 }
 
-
-/* Additional bottom fade */
-
 .hero-section::after {
   content: "";
 
   position: absolute;
-
   left: 0;
   right: 0;
   bottom: 0;
 
-  height: 30%;
+  height: 22%;
 
   z-index: 2;
 
   background: linear-gradient(
     to bottom,
     transparent,
-    #0d0b12
+    #071a29
   );
 
   pointer-events: none;
 }
 
-
-/* Hero content */
-
 .hero-content {
   position: relative;
 
-  width: min(1200px, 88%);
+  width: min(1250px, 88%);
+  margin: 0 auto;
 
   z-index: 5;
 
-  padding-top: 70px;
+  padding-top: 55px;
 }
 
+.hero-top-line {
+  width: 100%;
 
-/* Small top text */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 75px;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
 
 .hero-kicker {
-  margin: 0 0 25px;
+  margin: 0 0 18px;
 
-  font-size: 12px;
-  font-weight: 600;
+  color: rgba(255, 255, 255, 0.72);
 
-  letter-spacing: 4px;
+  font-size: 11px;
+  font-weight: 700;
 
-  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 3.5px;
 }
-
-
-/* Main heading */
 
 .hero-content h1 {
   margin: 0;
@@ -286,132 +273,129 @@ body {
   font-size: clamp(68px, 10vw, 150px);
 
   line-height: 0.82;
-
   letter-spacing: -7px;
 
-  font-weight: 800;
-
+  font-weight: 900;
   text-transform: uppercase;
 }
 
 .hero-content h1 span {
   margin-left: 7vw;
 
-  font-size: 0.43em;
+  font-size: 0.48em;
 
-  letter-spacing: 7px;
-
-  line-height: 1.2;
+  line-height: 1;
+  letter-spacing: 2px;
 
   font-weight: 400;
 }
 
-.hero-content h1 strong {
-  color: #ffffff;
+.hero-rule {
+  width: 75px;
+  height: 4px;
 
-  font-weight: 800;
+  margin: 32px 0 24px;
+
+  background: #ffffff;
 }
 
+.hero-tagline {
+  margin: 0;
 
-/* Subtitle */
+  max-width: 650px;
 
-.hero-subtitle {
-  margin: 32px 0 30px;
+  font-size: clamp(22px, 2.5vw, 34px);
 
-  max-width: 420px;
+  line-height: 1.25;
 
-  font-size: 16px;
-  line-height: 1.6;
+  font-weight: 500;
 
-  color: rgba(255, 255, 255, 0.78);
-
-  letter-spacing: 0.3px;
+  letter-spacing: -0.5px;
 }
 
+.hero-intro {
+  margin: 22px 0 30px;
 
-/* CTA */
+  max-width: 480px;
 
-.vote-button {
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.vote-button,
+.idea-button {
   display: inline-flex;
 
   align-items: center;
-  gap: 24px;
+  gap: 22px;
 
-  padding: 15px 22px;
+  padding: 15px 21px;
 
-  color: #111111;
-
+  color: #071a29;
   background: #ffffff;
 
   text-decoration: none;
 
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 11px;
+  font-weight: 800;
 
-  letter-spacing: 1.5px;
+  letter-spacing: 1.7px;
 
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease,
-    gap 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.vote-button span {
+.vote-button span,
+.idea-button span {
   font-size: 20px;
   line-height: 10px;
 }
 
-.vote-button:hover {
-  background: #b9a4e8;
+.vote-button:hover,
+.idea-button:hover {
+  background: #071a29;
   color: #ffffff;
 
-  gap: 32px;
-
   transform: translateY(-3px);
+  gap: 30px;
 }
 
-
-/* Ballot */
-
-.ballot-number {
+.hero-ballot {
   position: absolute;
 
-  right: 2%;
-  bottom: 5%;
+  right: 6vw;
+  bottom: 12%;
+
+  z-index: 5;
 
   display: flex;
   flex-direction: column;
 
   text-align: right;
-
-  color: #ffffff;
 }
 
-.ballot-number span {
-  font-size: 11px;
+.hero-ballot span {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 10px;
   letter-spacing: 3px;
-  opacity: 0.65;
 }
 
-.ballot-number strong {
+.hero-ballot strong {
   margin-top: 3px;
 
-  font-size: 48px;
-
+  font-size: 70px;
   line-height: 1;
 
-  letter-spacing: -2px;
+  letter-spacing: -5px;
 }
-
-
-/* Scroll */
 
 .scroll-indicator {
   position: absolute;
 
   left: 6vw;
-  bottom: 40px;
+  bottom: 35px;
 
   z-index: 10;
 
@@ -419,21 +403,48 @@ body {
   align-items: center;
   gap: 13px;
 
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.6);
 
   text-decoration: none;
 
   font-size: 9px;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
 }
 
 .scroll-indicator i {
-  display: block;
-
   width: 42px;
   height: 1px;
 
-  background: rgba(255, 255, 255, 0.65);
+  display: block;
+
+  background: rgba(255, 255, 255, 0.6);
+}
+
+
+/* =========================================================
+   COMMON
+   ========================================================= */
+
+.section-label {
+  margin-bottom: 60px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.small-heading {
+  margin: 0 0 18px;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
 }
 
 
@@ -444,111 +455,516 @@ body {
 .about-section {
   position: relative;
 
-  padding: 140px 8vw;
+  padding: 135px 8vw;
 
-  background: #0d0b12;
+  background: #071a29;
 }
 
-.section-label {
-  margin-bottom: 70px;
-
-  color: #a99bc7;
-
-  font-size: 11px;
-
-  letter-spacing: 3px;
-}
-
-.about-content {
+.about-grid {
   display: grid;
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 10vw;
+  gap: 9vw;
 
-  align-items: end;
+  align-items: start;
 }
 
-.small-heading {
-  margin: 0 0 20px;
-
-  color: #a99bc7;
-
-  font-size: 11px;
-  letter-spacing: 3px;
-}
-
-.about-content h2 {
+.about-heading h2 {
   margin: 0;
 
   font-size: clamp(55px, 7vw, 105px);
 
   line-height: 0.9;
-
   letter-spacing: -5px;
 }
 
-.about-content h2 span {
-  color: #a99bc7;
+.about-heading h2 span {
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .about-text {
-  max-width: 520px;
+  max-width: 590px;
+}
 
-  margin: 0;
+.about-text p {
+  margin: 0 0 22px;
 
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.68);
 
-  font-size: 17px;
-
+  font-size: 16px;
   line-height: 1.8;
+}
+
+.about-text .highlight-text {
+  margin: 35px 0;
+
+  color: #ffffff;
+
+  font-size: 22px;
+  line-height: 1.45;
+
+  font-weight: 500;
 }
 
 
 /* =========================================================
-   VOTE SECTION
+   EXPERIENCE
+   ========================================================= */
+
+.experience-section {
+  padding: 130px 8vw;
+
+  background: #f4f2ed;
+  color: #071a29;
+}
+
+.experience-section .section-label,
+.experience-section .small-heading {
+  color: rgba(7, 26, 41, 0.48);
+}
+
+.experience-header {
+  display: grid;
+
+  grid-template-columns: 1fr 0.75fr;
+
+  gap: 10vw;
+
+  align-items: end;
+
+  margin-bottom: 75px;
+}
+
+.experience-header h2 {
+  margin: 0;
+
+  font-size: clamp(50px, 6vw, 90px);
+
+  line-height: 0.92;
+  letter-spacing: -4px;
+}
+
+.experience-header h2 span {
+  color: rgba(7, 26, 41, 0.42);
+}
+
+.experience-intro {
+  max-width: 520px;
+
+  margin: 0;
+
+  color: rgba(7, 26, 41, 0.68);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.experience-list {
+  border-top: 1px solid rgba(7, 26, 41, 0.2);
+}
+
+.experience-item {
+  display: grid;
+
+  grid-template-columns: 80px 1fr;
+
+  gap: 25px;
+
+  padding: 30px 0;
+
+  border-bottom: 1px solid rgba(7, 26, 41, 0.2);
+}
+
+.experience-number {
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  opacity: 0.45;
+}
+
+.experience-item h3 {
+  margin: 0 0 8px;
+
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.experience-item p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: rgba(7, 26, 41, 0.63);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.experience-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+
+  margin-top: 55px;
+
+  color: rgba(7, 26, 41, 0.38);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   VISION
+   ========================================================= */
+
+.vision-section {
+  padding: 135px 8vw;
+
+  background: #071a29;
+}
+
+.vision-heading {
+  margin-bottom: 70px;
+}
+
+.vision-heading h2 {
+  margin: 0;
+
+  font-size: clamp(50px, 7vw, 100px);
+
+  line-height: 0.9;
+  letter-spacing: -5px;
+}
+
+.vision-heading h2 span {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.vision-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1px;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.vision-card {
+  min-height: 260px;
+
+  padding: 32px;
+
+  background: #0a2233;
+
+  transition: 0.3s ease;
+}
+
+.vision-card:hover {
+  background: #102d40;
+  transform: translateY(-4px);
+}
+
+.vision-card span {
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.vision-card h3 {
+  margin: 50px 0 14px;
+
+  font-size: 17px;
+  letter-spacing: 1.8px;
+}
+
+.vision-card p {
+  max-width: 330px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.vision-statement {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 40px;
+
+  margin-top: 80px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.vision-statement span {
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.vision-statement p {
+  max-width: 650px;
+
+  margin: 0;
+
+  font-size: clamp(22px, 3vw, 38px);
+
+  line-height: 1.25;
+
+  letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   WHY SHREEYA
+   ========================================================= */
+
+.why-section {
+  padding: 135px 8vw;
+
+  background: #ffffff;
+  color: #071a29;
+}
+
+.why-section .section-label,
+.why-section .small-heading {
+  color: rgba(7, 26, 41, 0.42);
+}
+
+.why-grid {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 10vw;
+}
+
+.why-heading h2 {
+  margin: 0;
+
+  font-size: clamp(55px, 7vw, 105px);
+
+  line-height: 0.88;
+  letter-spacing: -5px;
+}
+
+.why-heading h2 span {
+  color: rgba(7, 26, 41, 0.35);
+}
+
+.why-big {
+  margin: 0 0 45px;
+
+  max-width: 680px;
+
+  font-size: 23px;
+  line-height: 1.5;
+
+  color: rgba(7, 26, 41, 0.75);
+}
+
+.why-points {
+  border-top: 1px solid rgba(7, 26, 41, 0.18);
+}
+
+.why-points div {
+  display: grid;
+
+  grid-template-columns: 55px 1fr;
+
+  gap: 20px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid rgba(7, 26, 41, 0.18);
+}
+
+.why-points strong {
+  font-size: 11px;
+  opacity: 0.4;
+}
+
+.why-points span {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.why-ending {
+  max-width: 600px;
+
+  margin: 42px 0 0;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: rgba(7, 26, 41, 0.65);
+}
+
+
+/* =========================================================
+   YOUR BHARATI
+   ========================================================= */
+
+.bharati-section {
+  padding: 135px 8vw;
+
+  background: #dce6e5;
+  color: #071a29;
+
+  text-align: center;
+}
+
+.bharati-inner {
+  max-width: 950px;
+
+  margin: 0 auto;
+}
+
+.bharati-section .section-label,
+.bharati-section .small-heading {
+  color: rgba(7, 26, 41, 0.45);
+}
+
+.bharati-section h2 {
+  margin: 0;
+
+  font-size: clamp(58px, 8vw, 115px);
+
+  line-height: 0.85;
+  letter-spacing: -6px;
+}
+
+.bharati-section h2 span {
+  color: rgba(7, 26, 41, 0.4);
+}
+
+.bharati-text {
+  margin: 35px 0 10px;
+
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.bharati-description {
+  max-width: 520px;
+
+  margin: 0 auto 45px;
+
+  color: rgba(7, 26, 41, 0.62);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.bharati-line {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 12px 28px;
+
+  margin-bottom: 40px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: rgba(7, 26, 41, 0.5);
+}
+
+.idea-button {
+  background: #071a29;
+  color: #ffffff;
+}
+
+.idea-button:hover {
+  background: #ffffff;
+  color: #071a29;
+}
+
+
+/* =========================================================
+   FINAL VOTE
    ========================================================= */
 
 .vote-section {
-  min-height: 80vh;
+  min-height: 90vh;
 
-  padding: 100px 6vw;
+  padding: 110px 6vw;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  background:
-    radial-gradient(
-      circle at center,
-      #342a48 0%,
-      #17131f 45%,
-      #0d0b12 80%
-    );
+  background: #071a29;
 }
 
 .vote-card {
-  width: min(650px, 100%);
+  width: min(800px, 100%);
 
-  padding: 65px;
+  padding: 75px 50px;
 
   text-align: center;
 
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 
-  background: rgba(255, 255, 255, 0.035);
-
-  backdrop-filter: blur(14px);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.015)
+    );
 }
 
 .vote-small {
-  margin: 0 0 20px;
+  margin: 0 0 40px;
 
-  color: #b9a4e8;
+  color: rgba(255, 255, 255, 0.45);
 
   font-size: 10px;
-  letter-spacing: 4px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.vote-label {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.final-ballot {
+  margin: 10px 0 35px;
+
+  font-size: clamp(90px, 14vw, 170px);
+
+  line-height: 0.85;
+
+  font-weight: 900;
+
+  letter-spacing: -10px;
 }
 
 .vote-card h2 {
@@ -557,76 +973,68 @@ body {
   display: flex;
   flex-direction: column;
 
-  font-size: clamp(55px, 8vw, 100px);
+  font-size: clamp(45px, 7vw, 90px);
 
-  line-height: 0.85;
-
-  letter-spacing: -5px;
+  line-height: 0.9;
+  letter-spacing: -4px;
 }
 
 .vote-card h2 span {
-  color: #b9a4e8;
-}
-
-.ballot-box {
-  width: 160px;
-
-  margin: 45px auto 25px;
-
-  padding: 18px;
-
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.ballot-box span {
-  display: block;
-
-  margin-bottom: 7px;
-
-  font-size: 9px;
-  letter-spacing: 2px;
-
-  color: rgba(255, 255, 255, 0.55);
-}
-
-.ballot-box strong {
-  font-size: 50px;
-  line-height: 1;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .vote-description {
-  margin: 0 0 30px;
+  margin: 30px 0 0;
 
   color: rgba(255, 255, 255, 0.65);
 
-  font-size: 14px;
+  font-size: 16px;
+}
+
+.final-divider {
+  width: 60px;
+  height: 2px;
+
+  margin: 30px auto;
+  background: #ffffff;
+}
+
+.instagram {
+  margin: 0 0 35px;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  font-size: 13px;
+  letter-spacing: 1px;
 }
 
 .final-vote-button {
-  padding: 16px 28px;
+  display: inline-flex;
 
-  border: 0;
+  align-items: center;
+  gap: 20px;
+
+  padding: 16px 25px;
 
   background: #ffffff;
+  color: #071a29;
 
-  color: #111111;
-
-  cursor: pointer;
+  text-decoration: none;
 
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 800;
 
   letter-spacing: 2px;
 
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    color 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.final-vote-button span {
+  font-size: 18px;
 }
 
 .final-vote-button:hover {
-  background: #b9a4e8;
-  color: #ffffff;
+  background: #dce6e5;
 
   transform: translateY(-3px);
 }
@@ -637,7 +1045,7 @@ body {
    ========================================================= */
 
 .election-footer {
-  min-height: 80px;
+  min-height: 75px;
 
   padding: 0 6vw;
 
@@ -645,13 +1053,17 @@ body {
   align-items: center;
   justify-content: space-between;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 20px;
 
-  background: #0d0b12;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-  color: rgba(255, 255, 255, 0.5);
+  background: #071a29;
 
-  font-size: 10px;
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 9px;
+  font-weight: 700;
+
   letter-spacing: 2px;
 }
 
@@ -664,7 +1076,7 @@ body {
 
   .election-navbar {
     height: 70px;
-    padding: 0 24px;
+    padding: 0 22px;
   }
 
   .nav-logo {
@@ -680,19 +1092,19 @@ body {
     position: absolute;
 
     top: 70px;
-    left: 20px;
-    right: 20px;
+    left: 18px;
+    right: 18px;
 
     display: none;
 
-    padding: 20px;
+    padding: 18px;
 
     flex-direction: column;
     align-items: flex-start;
 
-    gap: 8px;
+    gap: 5px;
 
-    background: rgba(13, 11, 18, 0.94);
+    background: rgba(7, 26, 41, 0.97);
 
     border: 1px solid rgba(255, 255, 255, 0.1);
 
@@ -705,9 +1117,11 @@ body {
 
   .nav-links a {
     width: 100%;
-    padding: 14px 5px;
+    padding: 13px 5px;
   }
 
+
+  /* HERO */
 
   .hero-section {
     min-height: 100svh;
@@ -721,104 +1135,320 @@ body {
     background:
       linear-gradient(
         180deg,
-        rgba(8, 7, 13, 0.55) 0%,
-        rgba(8, 7, 13, 0.22) 35%,
-        rgba(8, 7, 13, 0.82) 100%
+        rgba(3, 13, 22, 0.4) 0%,
+        rgba(3, 13, 22, 0.48) 35%,
+        rgba(3, 13, 22, 0.92) 100%
       );
   }
 
   .hero-content {
     width: 88%;
+    padding-top: 75px;
+  }
 
-    padding-top: 100px;
+  .hero-top-line {
+    margin-bottom: 55px;
+
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-top-line span:last-child {
+    display: none;
   }
 
   .hero-kicker {
-    margin-bottom: 22px;
-
-    font-size: 9px;
-    letter-spacing: 2.5px;
+    font-size: 8px;
+    letter-spacing: 2px;
   }
 
   .hero-content h1 {
     font-size: clamp(57px, 17vw, 100px);
 
-    letter-spacing: -4px;
+    letter-spacing: -5px;
   }
 
   .hero-content h1 span {
-    margin-left: 15vw;
+    margin-left: 12vw;
 
-    font-size: 0.38em;
+    font-size: 0.45em;
 
-    letter-spacing: 4px;
+    letter-spacing: 1px;
   }
 
-  .hero-subtitle {
-    max-width: 290px;
+  .hero-rule {
+    margin: 25px 0 20px;
 
-    margin-top: 25px;
+    width: 55px;
+    height: 3px;
+  }
 
+  .hero-tagline {
+    font-size: 21px;
+  }
+
+  .hero-intro {
     font-size: 13px;
+    line-height: 1.6;
   }
 
-  .ballot-number {
-    right: 0;
-    bottom: 15%;
-
-    opacity: 0.9;
+  .vote-button {
+    padding: 14px 17px;
+    font-size: 10px;
   }
 
-  .ballot-number strong {
-    font-size: 38px;
+  .hero-ballot {
+    right: 22px;
+    bottom: 13%;
+  }
+
+  .hero-ballot strong {
+    font-size: 42px;
   }
 
   .scroll-indicator {
-    left: 24px;
+    left: 22px;
     bottom: 25px;
+
+    font-size: 7px;
   }
 
+
+  /* COMMON */
+
+  .section-label {
+    margin-bottom: 42px;
+    font-size: 9px;
+  }
+
+
+  /* ABOUT */
 
   .about-section {
     padding: 90px 24px;
   }
 
-  .section-label {
-    margin-bottom: 45px;
-  }
-
-  .about-content {
+  .about-grid {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 45px;
   }
 
-  .about-content h2 {
+  .about-heading h2 {
     font-size: clamp(55px, 18vw, 90px);
     letter-spacing: -4px;
   }
 
-  .about-text {
-    font-size: 15px;
+  .about-text p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .about-text .highlight-text {
+    font-size: 20px;
   }
 
 
+  /* EXPERIENCE */
+
+  .experience-section {
+    padding: 90px 24px;
+  }
+
+  .experience-header {
+    grid-template-columns: 1fr;
+    gap: 35px;
+
+    margin-bottom: 50px;
+  }
+
+  .experience-header h2 {
+    font-size: clamp(50px, 17vw, 82px);
+    letter-spacing: -4px;
+  }
+
+  .experience-intro {
+    font-size: 14px;
+  }
+
+  .experience-item {
+    grid-template-columns: 42px 1fr;
+    gap: 10px;
+
+    padding: 25px 0;
+  }
+
+  .experience-item h3 {
+    font-size: 15px;
+  }
+
+  .experience-item p {
+    font-size: 13px;
+  }
+
+  .experience-bottom {
+    gap: 10px 16px;
+    font-size: 8px;
+  }
+
+
+  /* VISION */
+
+  .vision-section {
+    padding: 90px 24px;
+  }
+
+  .vision-heading {
+    margin-bottom: 45px;
+  }
+
+  .vision-heading h2 {
+    font-size: clamp(50px, 17vw, 85px);
+    letter-spacing: -4px;
+  }
+
+  .vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vision-card {
+    min-height: auto;
+    padding: 27px;
+  }
+
+  .vision-card h3 {
+    margin-top: 35px;
+  }
+
+  .vision-statement {
+    display: block;
+    margin-top: 55px;
+  }
+
+  .vision-statement p {
+    margin-top: 18px;
+    font-size: 23px;
+  }
+
+
+  /* WHY */
+
+  .why-section {
+    padding: 90px 24px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .why-heading h2 {
+    font-size: clamp(55px, 18vw, 90px);
+    letter-spacing: -4px;
+  }
+
+  .why-big {
+    font-size: 19px;
+  }
+
+  .why-points div {
+    grid-template-columns: 40px 1fr;
+  }
+
+
+  /* BHARATI */
+
+  .bharati-section {
+    padding: 90px 24px;
+  }
+
+  .bharati-section h2 {
+    font-size: clamp(55px, 18vw, 90px);
+    letter-spacing: -5px;
+  }
+
+  .bharati-text {
+    font-size: 21px;
+  }
+
+  .bharati-description {
+    font-size: 14px;
+  }
+
+  .bharati-line {
+    gap: 10px 17px;
+    font-size: 8px;
+  }
+
+
+  /* VOTE */
+
   .vote-section {
+    min-height: 80vh;
     padding: 70px 20px;
   }
 
   .vote-card {
-    padding: 45px 22px;
+    padding: 55px 22px;
+  }
+
+  .final-ballot {
+    font-size: 110px;
   }
 
   .vote-card h2 {
-    font-size: clamp(55px, 18vw, 90px);
-    letter-spacing: -4px;
+    font-size: clamp(48px, 17vw, 80px);
   }
 
+  .vote-description {
+    font-size: 14px;
+  }
+
+
+  /* FOOTER */
 
   .election-footer {
-    padding: 0 24px;
+    min-height: auto;
 
-    font-size: 8px;
+    padding: 22px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 9px;
+
+    font-size: 7px;
   }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .hero-content h1 {
+    font-size: 58px;
+  }
+
+  .hero-tagline {
+    font-size: 19px;
+  }
+
+  .hero-intro {
+    max-width: 300px;
+  }
+
+  .hero-ballot {
+    display: none;
+  }
+
+  .vision-card {
+    padding: 24px;
+  }
+
+  .vote-card {
+    padding: 45px 18px;
+  }
+
 }
