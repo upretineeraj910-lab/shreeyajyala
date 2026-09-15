@@ -42,34 +42,21 @@ export default function Home() {
       {/* ================= HERO ================= */}
       <section className="hero-section" id="home">
 
-        <div className="hero-image">
+        {/* FULL BANNER — no cropping */}
+        <div className="hero-banner">
           <Image
             src="/shreeya2.jpeg"
-            alt="Shreeya Jyala - Candidate for President, BCSU"
-            fill
+            alt="Vote for Shreeya Jyala — Candidate for President, BCSU, Ballot No. 02"
+            width={1280}
+            height={341}
             priority
             sizes="100vw"
-            className="hero-photo"
+            className="hero-banner-img"
           />
         </div>
 
-        <div className="hero-overlay" />
-
+        {/* TEXT BELOW THE IMAGE */}
         <div className="hero-content">
-
-          <div className="hero-top-line">
-            <span>BCSU PRESIDENTIAL ELECTION</span>
-            <span>BALLOT NO. 02</span>
-          </div>
-
-          <p className="hero-kicker">
-            CANDIDATE FOR PRESIDENT, BCSU
-          </p>
-
-          <h1>
-            SHREEYA
-            <span>JYALA</span>
-          </h1>
 
           <div className="hero-rule" />
 
@@ -90,11 +77,12 @@ export default function Home() {
             <span>→</span>
           </a>
 
-        </div>
+          <div className="hero-meta">
+            <span>BCSU PRESIDENTIAL ELECTION</span>
+            <span>CANDIDATE FOR PRESIDENT</span>
+            <span>BALLOT NO. 02</span>
+          </div>
 
-        <div className="hero-ballot">
-          <span>BALLOT</span>
-          <strong>02</strong>
         </div>
 
         <a href="#about" className="scroll-indicator">
@@ -215,7 +203,7 @@ export default function Home() {
           <div className="experience-item">
             <span className="experience-number">03</span>
             <div>
-              <h3>PR & CONTENT</h3>
+              <h3>PR &amp; CONTENT</h3>
               <p>
                 Working with people, building connections and managing
                 communication across different platforms.
@@ -273,7 +261,7 @@ export default function Home() {
             <span>01</span>
             <h3>OPPORTUNITIES</h3>
             <p>
-              Regular internship & career fairs, networking opportunities
+              Regular internship &amp; career fairs, networking opportunities
               and industry exposure.
             </p>
           </article>

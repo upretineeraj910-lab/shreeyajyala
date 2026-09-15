@@ -48,8 +48,8 @@ body {
 
   background: linear-gradient(
     to bottom,
-    rgba(3, 14, 23, 0.78),
-    rgba(3, 14, 23, 0)
+    rgba(3, 14, 23, 0.9),
+    rgba(3, 14, 23, 0.35)
   );
 
   backdrop-filter: blur(5px);
@@ -154,147 +154,57 @@ body {
 
 
 /* =========================================================
-   HERO
+   HERO — FULL BANNER, TEXT BELOW
    ========================================================= */
 
 .hero-section {
   position: relative;
 
   min-height: 100svh;
-  width: 100%;
 
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
+  padding: 130px 6vw 110px;
+
+  background: #071a29;
+}
+
+/* the banner is shown COMPLETE — never cropped */
+.hero-banner {
+  width: min(1250px, 100%);
+  margin: 0 auto;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  line-height: 0;
   overflow: hidden;
 }
 
-.hero-image {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
+.hero-banner-img {
+  display: block;
 
-.hero-photo {
-  object-fit: cover;
-  object-position: center;
-}
+  width: 100%;
+  height: auto;
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-
-  z-index: 1;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(3, 13, 22, 0.9) 0%,
-      rgba(3, 13, 22, 0.65) 38%,
-      rgba(3, 13, 22, 0.18) 78%,
-      rgba(3, 13, 22, 0.08) 100%
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(3, 13, 22, 0.15),
-      rgba(3, 13, 22, 0.55)
-    );
-
-  pointer-events: none;
-}
-
-.hero-section::after {
-  content: "";
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  height: 22%;
-
-  z-index: 2;
-
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    #071a29
-  );
-
-  pointer-events: none;
+  object-fit: contain;
 }
 
 .hero-content {
   position: relative;
 
-  width: min(1250px, 88%);
+  width: min(1250px, 100%);
   margin: 0 auto;
 
-  z-index: 5;
-
-  padding-top: 55px;
-}
-
-.hero-top-line {
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-bottom: 75px;
-
-  color: rgba(255, 255, 255, 0.62);
-
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-}
-
-.hero-kicker {
-  margin: 0 0 18px;
-
-  color: rgba(255, 255, 255, 0.72);
-
-  font-size: 11px;
-  font-weight: 700;
-
-  letter-spacing: 3.5px;
-}
-
-.hero-content h1 {
-  margin: 0;
-
-  display: flex;
-  flex-direction: column;
-
-  width: fit-content;
-
-  font-size: clamp(68px, 10vw, 150px);
-
-  line-height: 0.82;
-  letter-spacing: -7px;
-
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.hero-content h1 span {
-  margin-left: 7vw;
-
-  font-size: 0.48em;
-
-  line-height: 1;
-  letter-spacing: 2px;
-
-  font-weight: 400;
+  padding-top: 42px;
 }
 
 .hero-rule {
   width: 75px;
   height: 4px;
 
-  margin: 32px 0 24px;
+  margin: 0 0 24px;
 
   background: #ffffff;
 }
@@ -314,14 +224,33 @@ body {
 }
 
 .hero-intro {
-  margin: 22px 0 30px;
+  margin: 20px 0 30px;
 
-  max-width: 480px;
+  max-width: 520px;
 
   color: rgba(255, 255, 255, 0.68);
 
   font-size: 15px;
   line-height: 1.7;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px 28px;
+
+  margin-top: 38px;
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
 }
 
 .vote-button,
@@ -357,38 +286,10 @@ body {
   background: #071a29;
   color: #ffffff;
 
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+
   transform: translateY(-3px);
   gap: 30px;
-}
-
-.hero-ballot {
-  position: absolute;
-
-  right: 6vw;
-  bottom: 12%;
-
-  z-index: 5;
-
-  display: flex;
-  flex-direction: column;
-
-  text-align: right;
-}
-
-.hero-ballot span {
-  color: rgba(255, 255, 255, 0.55);
-
-  font-size: 10px;
-  letter-spacing: 3px;
-}
-
-.hero-ballot strong {
-  margin-top: 3px;
-
-  font-size: 70px;
-  line-height: 1;
-
-  letter-spacing: -5px;
 }
 
 .scroll-indicator {
@@ -1124,60 +1025,17 @@ body {
   /* HERO */
 
   .hero-section {
-    min-height: 100svh;
-  }
+    min-height: auto;
 
-  .hero-photo {
-    object-position: 58% center;
-  }
-
-  .hero-overlay {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(3, 13, 22, 0.4) 0%,
-        rgba(3, 13, 22, 0.48) 35%,
-        rgba(3, 13, 22, 0.92) 100%
-      );
+    padding: 100px 22px 80px;
   }
 
   .hero-content {
-    width: 88%;
-    padding-top: 75px;
-  }
-
-  .hero-top-line {
-    margin-bottom: 55px;
-
-    font-size: 8px;
-    letter-spacing: 1.5px;
-  }
-
-  .hero-top-line span:last-child {
-    display: none;
-  }
-
-  .hero-kicker {
-    font-size: 8px;
-    letter-spacing: 2px;
-  }
-
-  .hero-content h1 {
-    font-size: clamp(57px, 17vw, 100px);
-
-    letter-spacing: -5px;
-  }
-
-  .hero-content h1 span {
-    margin-left: 12vw;
-
-    font-size: 0.45em;
-
-    letter-spacing: 1px;
+    padding-top: 32px;
   }
 
   .hero-rule {
-    margin: 25px 0 20px;
+    margin-bottom: 20px;
 
     width: 55px;
     height: 3px;
@@ -1192,23 +1050,21 @@ body {
     line-height: 1.6;
   }
 
+  .hero-meta {
+    gap: 8px 16px;
+    font-size: 8px;
+    letter-spacing: 1.8px;
+  }
+
   .vote-button {
     padding: 14px 17px;
     font-size: 10px;
   }
 
-  .hero-ballot {
-    right: 22px;
-    bottom: 13%;
-  }
-
-  .hero-ballot strong {
-    font-size: 42px;
-  }
-
   .scroll-indicator {
-    left: 22px;
-    bottom: 25px;
+    position: static;
+
+    margin-top: 45px;
 
     font-size: 7px;
   }
@@ -1427,8 +1283,8 @@ body {
 
 @media (max-width: 420px) {
 
-  .hero-content h1 {
-    font-size: 58px;
+  .hero-section {
+    padding: 95px 18px 70px;
   }
 
   .hero-tagline {
@@ -1437,10 +1293,6 @@ body {
 
   .hero-intro {
     max-width: 300px;
-  }
-
-  .hero-ballot {
-    display: none;
   }
 
   .vision-card {
