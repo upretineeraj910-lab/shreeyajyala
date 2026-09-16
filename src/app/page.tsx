@@ -38,12 +38,7 @@ export default function Home() {
 
       </nav>
 
-
-      {/* ================= HERO ================= */}
-      <section className="hero-section" id="home">
-
-        {/* FULL BANNER — no cropping */}
-        <div className="hero-banner">
+ <div className="hero-banner">
           <Image
             src="/shreeya2.jpeg"
             alt="Vote for Shreeya Jyala — Candidate for President, BCSU, Ballot No. 02"
@@ -54,6 +49,21 @@ export default function Home() {
             className="hero-banner-img"
           />
         </div>
+      {/* ================= HERO ================= */}
+      <section className="hero-section" id="home">
+
+        {/* FULL BANNER — no cropping */}
+        {/* <div className="hero-banner">
+          <Image
+            src="/shreeya2.jpeg"
+            alt="Vote for Shreeya Jyala — Candidate for President, BCSU, Ballot No. 02"
+            width={1280}
+            height={341}
+            priority
+            sizes="100vw"
+            className="hero-banner-img"
+          />
+        </div> */}
 
         {/* TEXT BELOW THE IMAGE */}
         <div className="hero-content">
